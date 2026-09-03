@@ -15,6 +15,21 @@ const GROQ_MODEL = process.env.GROQ_MODEL || "openai/gpt-oss-20b";
 
 app.use(express.json({ limit: "1mb" }));
 
+// GitHub Pages frontend'inin backend'e erişmesine izin ver.
+const allowedOrigin = process.env.FRONTEND_URL || "*";
+
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", allowedOrigin);
+    res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+
+    if (req.method === "OPTIONS") {
+        return res.sendStatus(204);
+    }
+
+    next();
+});
+
 // Frontend dosyalarını sun
 app.use(express.static(path.join(__dirname, "public")));
 
