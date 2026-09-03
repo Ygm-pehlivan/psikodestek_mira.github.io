@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Psikodestek | Buradayım</title>
+
+    <meta
+        name="description"
+        content="Kendini ifade edebileceğin sakin ve güvenli bir dijital destek alanı."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-icon">🌿</div>
+
+            <div class="brand-text">
+                <span class="brand-name">Psikodestek</span>
+                <span class="brand-status">
+                    <span class="status-dot"></span>
+                    Buradayım
+                </span>
+            </div>
+        </div>
+
+        <div class="header-actions">
+
+            <button
+                class="icon-button"
+                id="themeButton"
+                type="button"
+                aria-label="Temayı değiştir"
+            >
+                ☀️
+            </button>
+
+            <button
+                class="clear-button"
+                id="clearChatButton"
+                type="button"
+            >
+                Temizle
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="app">
+
+        <!-- Hoş geldin alanı -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-icon">
+                🌱
+            </div>
+
+            <h1>
+                Merhaba, ben <span>Mira</span>.
+            </h1>
+
+            <p>
+                Buradayım. İstersen bugün seni düşündüren,
+                yoran veya mutlu eden şeylerden bahsedebilirsin.
+            </p>
+
+            <div class="disclaimer">
+                <span>ⓘ</span>
+                <span>
+                    Ben bir yapay zekâ destek aracıyım; psikolog veya doktor değilim.
+                </span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= CHAT ================= -->
+
+        <section class="chat-container" id="chatContainer">
+
+            <div class="messages" id="messages">
+
+                <!-- İlk AI mesajı -->
+
+                <div class="message-row ai-row">
+
+                    <div class="avatar ai-avatar">
+                        🌿
+                    </div>
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            Mira
+                        </div>
+
+                        <div class="message ai-message">
+                            Merhaba 🌿<br><br>
+                            Bugün burada olman bile kendin için
+                            küçük bir adım. Nasıl hissediyorsun?
+                        </div>
+
+                        <div class="message-time">
+                            Şimdi
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Yazıyor -->
+
+            <div
+                class="typing-row"
+                id="typingIndicator"
+                aria-hidden="true"
+            >
+
+                <div class="avatar ai-avatar">
+                    🌿
+                </div>
+
+                <div class="typing-bubble">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= QUICK OPTIONS ================= -->
+
+            <div class="quick-options" id="quickOptions">
+
+                <button
+                    class="quick-option"
+                    data-message="Bugün kendimi iyi hissediyorum."
+                >
+                    😊 İyiyim
+                </button>
+
+                <button
+                    class="quick-option"
+                    data-message="Bugün biraz kötü hissediyorum."
+                >
+                    😔 Biraz kötüyüm
+                </button>
+
+                <button
+                    class="quick-option"
+                    data-message="Son zamanlarda kaygılı hissediyorum."
+                >
+                    🌧️ Kaygılıyım
+                </button>
+
+                <button
+                    class="quick-option"
+                    data-message="Sadece biraz konuşmak istiyorum."
+                >
+                    💬 Sadece konuşmak istiyorum
+                </button>
+
+            </div>
+
+
+            <!-- ================= INPUT ================= -->
+
+            <div class="input-area">
+
+                <div class="input-wrapper">
+
+                    <textarea
+                        id="messageInput"
+                        rows="1"
+                        maxlength="2000"
+                        placeholder="Aklından geçenleri yaz..."
+                        aria-label="Mesajını yaz"
+                    ></textarea>
+
+                    <button
+                        id="sendButton"
+                        class="send-button"
+                        type="button"
+                        aria-label="Mesaj gönder"
+                    >
+                        ➤
+                    </button>
+
+                </div>
+
+                <div class="input-info">
+
+                    <span>
+                        Enter ile gönder · Shift + Enter yeni satır
+                    </span>
+
+                    <span id="characterCount">
+                        0 / 2000
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUPPORT CARDS ================= -->
+
+        <section class="support-section">
+
+            <div class="section-heading">
+
+                <span>🌱</span>
+
+                <div>
+                    <h2>Kendine biraz zaman ayır</h2>
+
+                    <p>
+                        İstersen konuşmanın yanında küçük bir egzersiz de deneyebilirsin.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="support-grid">
+
+                <button
+                    class="support-card"
+                    data-support="breathing"
+                    type="button"
+                >
+                    <div class="support-icon breathing-icon">
+                        🌬️
+                    </div>
+
+                    <div>
+                        <h3>Nefes Egzersizi</h3>
+                        <p>Birlikte birkaç dakika nefes al.</p>
+                    </div>
+
+                    <span class="card-arrow">→</span>
+                </button>
+
+
+                <button
+                    class="support-card"
+                    data-support="journal"
+                    type="button"
+                >
+                    <div class="support-icon">
+                        ✍️
+                    </div>
+
+                    <div>
+                        <h3>Duygularını Yaz</h3>
+                        <p>Aklından geçenleri kendin için yaz.</p>
+                    </div>
+
+                    <span class="card-arrow">→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SAFETY ================= -->
+
+        <section class="safety-section">
+
+            <div class="safety-icon">
+                🫶
+            </div>
+
+            <div>
+
+                <h2>Kendini güvende hissetmiyorsan</h2>
+
+                <p>
+                    Eğer kendine veya başka birine zarar verme riski
+                    olduğunu düşünüyorsan, yalnız kalma ve bulunduğun
+                    yerdeki acil yardım hizmetlerinden veya bir sağlık
+                    profesyonelinden destek al.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div
+        class="modal-overlay"
+        id="modalOverlay"
+        aria-hidden="true"
+    >
+
+        <div class="modal" role="dialog">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                type="button"
+                aria-label="Kapat"
+            >
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🌿 Psikodestek
+        </div>
+
+        <p>
+            Kendine karşı nazik ol.
+        </p>
+
+        <small>
+            Bu uygulama profesyonel psikolojik veya tıbbi yardımın yerine geçmez.
+        </small>
+
+    </footer>
+
+
+    <script src="chat.js"></script>
+
+</body>
+</html>
