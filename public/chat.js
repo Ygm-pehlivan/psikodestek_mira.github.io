@@ -17,6 +17,9 @@ const JOURNAL_STORAGE_KEY = "psikodestek_journal";
 
 let isTyping = false;
 
+// GitHub Pages frontend'inin bağlanacağı yayınlanmış backend.
+const API_BASE_URL = "https://psikodestek-mira-github-io.onrender.com";
+
 
 /* =====================================================
    INIT
@@ -230,11 +233,11 @@ async function sendMessage(customMessage = null) {
         console.log(chatHistory);
 
 
-        console.log("🌐 /api/chat adresine istek gönderiliyor...");
+        console.log("🌐 Render backend /api/chat adresine istek gönderiliyor...");
 
 
         const response = await fetch(
-            "/api/chat",
+            `${API_BASE_URL}/api/chat`,
             {
                 method: "POST",
 
